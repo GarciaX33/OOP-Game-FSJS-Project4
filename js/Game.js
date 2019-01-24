@@ -38,4 +38,16 @@ class Game {
     let randomArray = this.phrases[randomArrayIndex];
     return randomArray;
   }
+
+  /**
+  * Begins game by selecting a random phrase and displaying it to user
+  */
+  startGame() {
+    let phraseSelect = new Phrase(this.getRandomPhrase(phrases));
+    phraseSelect.addPhraseToDisplay();
+  };
+
+
+
+
 }
