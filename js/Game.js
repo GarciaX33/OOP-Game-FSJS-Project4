@@ -30,9 +30,12 @@ class Game {
     ]
     return phrases;
   }
-  
+  /** will select and then return a random
+  phrase from the array of phrases stored in the Game class’s `phrases` property. **/
 
-
-
-
+  getRandomPhrase(phrases) {
+    let randomArrayIndex = [Math.floor(Math.random() * this.phrases.length)];
+    let randomArray = this.phrases[randomArrayIndex];
+    return randomArray;
+  }
 }
