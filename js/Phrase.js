@@ -24,34 +24,33 @@ class Phrase {
     }
   }
 
-  /**
-* Checks if passed letter is in phrase
-* param (string) letter - Letter to check
-*/
-checkLetter(){
-  let matched = this;
-  let phraseLi = document.getElementById("phrase").getElementsByTagName("li");
-  $('.keyrow button').bind('click', function(){
-    for (var i = 0; i < phraseLi.length; i++) {
-      if ($(this).text() === phraseLi[i].innerHTML) {
-        $(this).addClass("phraseLetters");
-        phraseLi[i].classList.add("correct");
-        matched.showMatchedLetter();
+    /**
+  * Checks if passed letter is in phrase
+  * param (string) letter - Letter to check
+  */
+  checkLetter(){
+    let matched = this;
+    let phraseLi = document.getElementById("phrase").getElementsByTagName("li");
+    $('.keyrow button').bind('click', function(){
+      for (var i = 0; i < phraseLi.length; i++) {
+        if ($(this).text() === phraseLi[i].innerHTML) {
+          $(this).addClass("phraseLetters");
+          phraseLi[i].classList.add("correct");
+          matched.showMatchedLetter();
+        }
       }
-    }
-  })
-}
+    })
+  }
 
-/**
-* Displays passed letter on screen after a match is found and distingishes itself with the color green for correct
-* param (string) letter - Letter to display
-*/
-showMatchedLetter(){
-  $('.correct').css('color', 'black');
-  $('.correct').css('background-color', 'green');
-  $('.correct').css('text-shadow', '4px black');
-};
-
+  /**
+  * Displays passed letter on screen after a match is found and distingishes itself with the color green for correct
+  * param (string) letter - Letter to display
+  */
+  showMatchedLetter(){
+    $('.correct').css('color', 'black');
+    $('.correct').css('background-color', 'green');
+    $('.correct').css('text-shadow', '4px black');
+  };
 
 
 }
