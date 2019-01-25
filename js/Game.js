@@ -44,8 +44,6 @@ class Game {
     let phraseSelect = new Phrase(this.getRandomPhrase(phrases));
     phraseSelect.addPhraseToDisplay();
   }
-  
-
 
 /**
 * Increases the value of the missed property that starts at 0.
@@ -88,5 +86,24 @@ won
     } else {
       return false;
     }
+  }
+  /**
+  * Handles onscreen keyboard button clicks
+  * param button - The clicked button element
+  */
+  handleInteraction(){
+      var checkPhrase = new Phrase(this.phrases[0]);
+      var pass = this;
+      var fail = this;
+      checkPhrase.checkLetter();
+      $('.keyrow button').bind('click', function() {
+      if ($(this).hasClass('phraseLetters')) {
+        $(this).css('background-color', 'green');
+        pass.checkForWin();
+      } else {
+        $(this).css('background-color', 'red');
+        fail.removeLife();
+      }
+    })
   }
 }

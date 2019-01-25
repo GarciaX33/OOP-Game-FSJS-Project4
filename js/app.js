@@ -6,7 +6,11 @@
   $('#btn__restart').hide();
  });
 
-
+ /** will hide main overlay once button is clicked  **/
+  $('#btn__reset').on('click',
+  function(){
+    hideOverlay();
+   });
 
 var phrases = [
     "the web app",
@@ -25,6 +29,11 @@ function hideOverlay() {
   theGame.startGame();
  }
 
+function startInteraction() {
+  $('#overlay').show();
+  theGame.handleInteraction();
+}
+startInteraction();
 
  // const logPhrase = (phrase) => {
  // console.log(`Phrase - phrase: `, phrases[phrase]);
