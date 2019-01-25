@@ -44,12 +44,49 @@ class Game {
     let phraseSelect = new Phrase(this.getRandomPhrase(phrases));
     phraseSelect.addPhraseToDisplay();
   }
+  
 
 
+/**
+* Increases the value of the missed property that starts at 0.
+* Removes a life from the scoreboard
+* Checks if player has remaining lives and ends game, if player is out and has reached 5 lost lives,then the gameOver function is called.
+*/
+removeLife(){
+    let hearts = document.getElementsByClassName('tries');
+		hearts[0].remove();
+		this.missed +=1
+			if (this.missed === 5) {
+				this.gameOver();
+			}
+}
 
+/**
+* Displays game over message
+* allows user to press button to restart and start a new game
+*/
+  gameOver(){
+    $('#overlay').addClass('lose').show();
+    $('#btn__reset').text('Start Game').hide();
+    $('#btn__restart').text('try again?').show();
+    $('#game-over-message').text('Ran Out Of Lives').show();
+    $('#btn__restart').text('New Game?');
+  }
 
-
-
-
-
+/**
+* Checks for winning move
+* return {boolean} True if game has been won, false if game wasn't
+won
+*/
+  checkForWin(){
+    if ($('.correct').length === $('.letter').length) {
+      $('#overlay').removeClass('lose')
+      $('#overlay').addClass('win').show();
+      $('#btn__reset').text('Start Game').hide();
+      $('#game-over-message').text('You Won The Game!').show();
+      $('#btn__restart').text('New Game?').show();
+    } else {
+      return false;
+    }
+  }
 }
