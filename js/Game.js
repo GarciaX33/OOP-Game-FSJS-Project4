@@ -45,19 +45,19 @@ class Game {
     phraseSelect.addPhraseToDisplay();
   }
 
-/**
-* Increases the value of the missed property that starts at 0.
-* Removes a life from the scoreboard
-* Checks if player has remaining lives and ends game, if player is out and has reached 5 lost lives,then the gameOver function is called.
-*/
-removeLife(){
-    let hearts = document.getElementsByClassName('tries');
-		hearts[0].remove();
-		this.missed +=1
-			if (this.missed === 5) {
-				this.gameOver();
-			}
-}
+  /**
+  * Increases the value of the missed property that starts at 0.
+  * Removes a life from the scoreboard
+  * Checks if player has remaining lives and ends game, if player is out and has reached 5 lost lives,then the gameOver function is called.
+  */
+  removeLife(){
+      let hearts = document.getElementsByClassName('tries');
+  		hearts[0].remove();
+  		this.missed +=1
+  			if (this.missed === 5) {
+  				this.gameOver();
+  			}
+  }
 
 /**
 * Displays game over message

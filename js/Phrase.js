@@ -12,6 +12,7 @@ class Phrase {
   /**
   * will Display phrase on game board
   */
+  /*** will split the string into individual letters*/
   addPhraseToDisplay() {
     let thisPhrase = this.phrase.split('');
     let thisUl = $('#phrase ul');
@@ -51,6 +52,4 @@ class Phrase {
     $('.correct').css('background-color', 'green');
     $('.correct').css('text-shadow', '4px black');
   };
-
-
 }

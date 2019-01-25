@@ -6,11 +6,11 @@
   $('#btn__restart').hide();
  });
 
- /** will hide main overlay once button is clicked  **/
-  $('#btn__reset').on('click',
-  function(){
-    hideOverlay();
-   });
+/** will hide main overlay once button is clicked  **/
+$('#btn__reset').on('click',
+function(){
+  hideOverlay();
+ });
 
 var phrases = [
     "the web app",
@@ -28,7 +28,7 @@ function hideOverlay() {
   $('#overlay').hide();
   theGame.startGame();
  }
-
+/** will start the game and call on the handleInteraction function in game file **/
 function startInteraction() {
   $('#overlay').show();
   theGame.handleInteraction();
