@@ -11,7 +11,7 @@ class Game {
    originally set as the value of the `phrases` property. **/
     this.phrases = this.phraseArray();
 
-    /**Phrase Object **/
+    /**Phrase Object  **/
     this.activePhrase = null;
   }
 //   /**
