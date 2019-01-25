@@ -3,9 +3,8 @@
  * Game.js */
 
  /** will declare the Game class. **/
-const phrase = new Phrase('');
 class Game {
-   /** Game class constructor method doesn’t receive any parameters. **/
+   /** Game class constructor method. no needed parameters **/
   constructor() {
     this.missed = 0;
    /**  will add 5 new Phrase objects directly in the empty array that was
@@ -38,14 +37,17 @@ class Game {
     let randomArray = this.phrases[randomArrayIndex];
     return randomArray;
   }
-
   /**
-  * Begins game by selecting a random phrase and displaying it to user
+  * Begins game by selecting a random phrase from getRandomPhrase and displaying it to user with addPhraseToDisplay
   */
   startGame() {
     let phraseSelect = new Phrase(this.getRandomPhrase(phrases));
     phraseSelect.addPhraseToDisplay();
-  };
+  }
+
+
+
+
 
 
 
