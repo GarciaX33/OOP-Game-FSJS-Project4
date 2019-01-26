@@ -1,5 +1,11 @@
 # OOP Javascript Phrase Hunter App Project 4 FSJS
-  
+
+
+## HTML changes
+
+* added 'restart' reload button.
+
+
 ## Built With
 
 * Jquery

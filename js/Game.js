@@ -102,6 +102,7 @@ won
         pass.checkForWin();
       } else {
         $(this).css('background-color', 'red');
+        $(this).attribute('disabled'); /** will fix bug that lets pick letters already shown as incorrect by disabling attribute therefore not removing life **/
         fail.removeLife();
       }
     })
