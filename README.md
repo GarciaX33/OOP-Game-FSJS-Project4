@@ -9,7 +9,6 @@
 ## Built With
 
 * Jquery
-* Atom
 * HTML, CSS, JS
 * Git
 
