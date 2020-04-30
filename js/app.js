@@ -34,13 +34,3 @@ function startInteraction() {
   theGame.handleInteraction();
 }
 startInteraction();
-
- // const logPhrase = (phrase) => {
- // console.log(`Phrase - phrase: `, phrases[phrase]);
- // };
- // const game = new Game();
- // logPhrase(game.getRandomPhrase());
- // logPhrase(game.getRandomPhrase());
- // logPhrase(game.getRandomPhrase());
- // logPhrase(game.getRandomPhrase());
- // logPhrase(game.getRandomPhrase());
