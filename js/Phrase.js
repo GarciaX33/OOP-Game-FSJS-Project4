@@ -12,7 +12,7 @@ class Phrase {
   /**
   * will Display phrase on game board
   */
-  /*** will split the string into individual letters*/
+  /*** will split the string into own letters*/
   addPhraseToDisplay() {
     let thisPhrase = this.phrase.split('');
     let thisUl = $('#phrase ul');
@@ -30,6 +30,7 @@ class Phrase {
   * param (string) letter - Letter to check
   */
   checkLetter(){
+    /** will correctly match if letter is on the current phrase**/
     let matched = this;
     let phraseLi = document.getElementById("phrase").getElementsByTagName("li");
     $('.keyrow button').bind('click', function(){
@@ -44,7 +45,7 @@ class Phrase {
   }
 
   /**
-  * Displays passed letter on screen after a match is found and distingishes itself with the color green for correct
+  * will displays passed letter on screen after a match is found and distingishes itself with the color green for correct
   * param (string) letter - Letter to display
   */
   showMatchedLetter(){

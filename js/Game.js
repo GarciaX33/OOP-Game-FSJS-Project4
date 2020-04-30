@@ -64,6 +64,7 @@ class Game {
 * allows user to press button to restart and start a new game
 */
   gameOver(){
+      /** will display that game has finish and give options to user  **/
     $('#overlay').addClass('lose').show();
     $('#btn__reset').text('Start Game').hide();
     $('#btn__restart').text('try again?').show();
@@ -72,7 +73,7 @@ class Game {
   }
 
 /**
-* Checks for winning move
+* Checks for winning choice
 * return {boolean} True if game has been won, false if game wasn't
 won
 */
@@ -103,6 +104,7 @@ won
       } else {
         $(this).css('background-color', 'red');
         $(this).attr('disabled', 'disabled'); /** will fix bug that lets pick letters already shown as incorrect by disabling attribute therefore not removing life **/
+          /** if no win then remove life **/
         fail.removeLife();
       }
     })
